@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Recipe } from '../recipe';
+import { RecipeItemComponent } from './recipe-item.component';
 
 @Component({
   selector: 'rb-recipe-list',
@@ -8,6 +9,7 @@ import { Recipe } from '../recipe';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
+  recipe = new Recipe('Dummy', 'Dummy', 'http://centuryshop.cachefly.net/getDynamicImage.aspx?path=BOBXLK-MAIN.jpg');
 
   constructor() { }
 
