@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Recipe } from "../recipe";
-import { RecipeListComponent } from "./recipe-list/recipe-list.component";
+import { RecipeListComponent } from "../recipe-list/recipe-list.component";
 
 @Component({
   selector: 'rb-recipe-detail',
