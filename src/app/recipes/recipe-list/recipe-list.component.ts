@@ -9,7 +9,7 @@ import { RecipeItemComponent } from './recipe-item.component';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
-  recipe = new Recipe('Dummy', 'Dummy', 'http://centuryshop.cachefly.net/getDynamicImage.aspx?path=BOBXLK-MAIN.jpg');
+  recipe = new Recipe('Dummy', 'Dummy', 'http://dressmakersdummy.net/wp-content/uploads/2011/05/vintage-dressmakers-dummy.jpg');
 
   constructor() { }
 
