@@ -10,7 +10,7 @@ import { RecipeItemComponent } from './recipe-item.component';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipe = new Recipe('Dummy', 'Dummy', 'http://dressmakersdummy.net/wp-content/uploads/2011/05/vintage-dressmakers-dummy.jpg');
+  recipe = new Recipe('Dummy', 'Dummy', 'https://www.countryandtownhouse.co.uk/wp-content/uploads/2016/06/Chicken-Satay-Eat-Beautiful-Wendy-Rowe.jpg');
 
   constructor() { }
 
