@@ -16,6 +16,7 @@ export class ShoppingListAddComponent implements OnChanges {
   ngOnChanges(changes) {
     if (changes.item.currentValue === null) {
       this.isAdd = true;
+      this.item = {name: null, amount: null}; // This means the item in no longer null, it just contains properties that are set to null.
     } else {
       this.isAdd = false;
     }
