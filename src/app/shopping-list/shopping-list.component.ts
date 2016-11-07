@@ -21,4 +21,8 @@ export class ShoppingListComponent implements OnInit {
     this.selectedItem = item; // this makes it so you can bind the item to the shopping-list-add component in the html.
   }
 
+  onCleared() {
+    this.selectedItem = null;
+  }
+
 }
