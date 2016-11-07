@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 
@@ -7,6 +7,8 @@ import { Ingredient } from '../shared/ingredient';
 
 @Injectable()
 export class RecipeService {
+  recipesChanged = new EventEmitter<Recipe[]>();
+
   private recipes: Recipe[] = [
     new Recipe('avocado salsa chicken recipe', 'Your new favorite 30-minute dinner recipe!', 'http://wearychef.com/wp-content/uploads/2013/05/avocado-salsa-chicken-12-150x150.jpg', [
       new Ingredient('Chicken Breast', 2),
@@ -51,7 +53,8 @@ export class RecipeService {
       .map((response: Response) => response.json()
       .subscribe(
         (data: Recipe[]) => {
-          this.recipes = data
+          this.recipes = data;
+          this.recipesChanged.emit(this.recipes);
         }
       ));
   }
