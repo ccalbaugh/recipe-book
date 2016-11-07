@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http, Response } from '@angular/http';
+import 'rxjs/Rx';
 
 import { Recipe } from './recipe';
 import { Ingredient } from '../shared/ingredient';
@@ -46,7 +47,13 @@ export class RecipeService {
   }
 
   fetchData() {
-
+    return this.http.get('https://recipebook-4a6f8.firebaseio.com/recipes.json')
+      .map((response: Response) => response.json()
+      .subscribe(
+        (data: Recipe[]) => {
+          this.recipes = data
+        }
+      ));
   }
 
 }
