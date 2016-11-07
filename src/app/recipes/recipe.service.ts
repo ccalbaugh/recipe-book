@@ -42,7 +42,7 @@ export class RecipeService {
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
-    this.http.post('https://recipebook-4a6f8.firebaseio.com/recipes.json', body, { headers: headers });
+    return this.http.post('https://recipebook-4a6f8.firebaseio.com/recipes.json', body, { headers: headers });
   }
 
   fetchData() {
