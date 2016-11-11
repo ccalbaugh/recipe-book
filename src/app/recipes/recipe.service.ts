@@ -15,7 +15,10 @@ export class RecipeService {
       new Ingredient('avocados', 2),
       new Ingredient('Salsa', 1) 
     ]),
-    new Recipe('turkey sandwich with goat cheese and jam', 'Make your tastebuds sing! ', 'http://wearychef.com/wp-content/uploads/2016/01/turkey-sandwich-with-goat-cheese-and-jam-17-150x150.jpg', [])
+    new Recipe('turkey sandwich with goat cheese and jam', 'Make your tastebuds sing! ', 'http://wearychef.com/wp-content/uploads/2016/01/turkey-sandwich-with-goat-cheese-and-jam-17-150x150.jpg', [
+      new Ingredient('Turkey', 2),
+      new Ingredient('Goat Cheese', 2)
+    ])
   ]
 
   constructor(private http: Http) {}
